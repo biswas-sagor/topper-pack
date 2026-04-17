@@ -1,0 +1,83 @@
+.topppa-hf__shortcode-column > input {
+    background: inherit;
+    color: inherit;
+    font-size: 12px;
+    border: none;
+    box-shadow: none;
+    padding: 4px 8px;
+    margin: 0;
+    width: 99%;
+}
+
+.topppa-hf__meta-options-row-heading {
+    border-right: 1px solid #E1E1E1;
+    padding: 15px;
+    width: 45%;
+    vertical-align: middle;
+}
+
+.topppa-hf__meta-options-row td {
+    padding-left: 12px;
+    padding-right: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    zoom: 1;
+    vertical-align: middle;
+}
+
+.topppa-hf__meta-options-table .topppa-hf__meta-options-row-body {
+    padding: 15px 10px;
+    position: relative;
+    width: 55%;
+}
+
+.topppa-hf__meta-options-table.widefat{
+	border-width: 0;
+}
+
+#topppa-hf-meta-box .inside {
+    margin: 0;
+    padding: 0;
+}
+
+.topppa-hf__meta-options-row-heading label {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 1.4em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 3px;
+    color: #333;
+}
+
+.topppa-hf__meta-options-row-body select {
+    width: 95%;
+}
+
+.topppa-hf__shortcode {
+    display: none;
+}
+
+.topppa-hf-selected-template-type-none .topppa-hf__display-condition-row,
+.topppa-hf-selected-template-type-none .topppa-hf__user-role-condition-row,
+.topppa-hf-selected-template-type-none .topppa-hf__shortcode,
+.topppa-hf-selected-template-type-none .topppa-hf__enable-for-canvas {
+    display: none;
+}
+
+.topppa-hf__element-hidden {
+    display: none
+}
+
+.topppa-hf__need-help {
+    padding: 4px 6px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 10px;
+}
+
+.topppa-hf__need-help:hover {
+    color: #fff;
+    text-decoration: none;
+}

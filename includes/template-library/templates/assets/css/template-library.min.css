@@ -1,0 +1,931 @@
+.topppaTemplateLibrary_preview {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: width .2s, height .2s;
+          transition: width .2s, height .2s;
+}
+.topppaTemplateLibrary_preview img{
+  max-width: 100%;
+}
+
+.topppaTemplateLibrary_preview > iframe {
+  width: 150%;
+  height: 150%;
+  -webkit-transform: scale(.666) translateX(-25%) translateY(-25%);
+      -ms-transform: scale(.666) translateX(-25%) translateY(-25%);
+          transform: scale(.666) translateX(-25%) translateY(-25%);
+}
+.topppaTemplateLibrary_logo-wrap{
+  height: 25px;
+  width: 25px;
+  margin-right: 5px;
+}
+.topppaTemplateLibrary_logo-title {
+  padding-top: 2px;
+}
+
+.topppaTemplateLibrary_responsive-menu-item {
+  display: inline-block;
+  padding: 15px 0;
+  width: 40px;
+  cursor: pointer;
+}
+.topppaTemplateLibrary_responsive-menu-item.elementor-active {
+  border-bottom: 3px solid #562dd4; 
+  background-image: -webkit-linear-gradient(top, #f1f3f5, #fff);
+  background-image:         linear-gradient(to bottom, #f1f3f5, #fff);
+}
+
+.topppaTemplateLibrary_header-menu .elementor-template-library-menu-item.elementor-active {
+  border-bottom-color: #460ec6;
+}
+
+#topppaTemplateLibrary_toolbar {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center; 
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+}
+
+#topppaTemplateLibrary_toolbar-search,
+#topppaTemplateLibrary_toolbar-filter {
+  position: relative; 
+  width: 160px;
+}
+
+#topppaTemplateLibrary_toolbar-search i,
+.topppaTemplateLibrary_filter-btn i {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  font-size: 15px;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.topppaTemplateLibrary_filter-btn {
+  display: block;
+  text-align: left;
+  cursor: pointer;
+}
+
+#topppaTemplateLibrary_toolbar-counter {
+  position: absolute;
+  right: 183px;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+#topppaTemplateLibrary_toolbar-counter strong {
+  color: #460ec6;
+  letter-spacing: 1px;
+}
+#topppaTemplateLibrary_toolbar-counter:before{
+  position: absolute;
+  content: '';
+  height: 32px;
+  width: 1px;
+  background: #cfe2f5;
+  right: -12px;
+  top: -5px;
+}
+#topppaTemplateLibrary_search {
+  border: none;
+}
+
+#topppaTemplateLibrary_search,
+.topppaTemplateLibrary_filter-btn {
+  padding: 8px 15px 8px 0; 
+  border-bottom: 1px solid #d5dadf;
+  border-radius: 0;
+  font-size: 12px;
+}
+.topppaTemplateLibrary_filter-tags {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  margin-top: 10px;
+  padding: 10px;
+  width: 100%;
+  min-width: 500px;
+  border-radius: 0 2px 2px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 5%);
+  transition: all 0.3s ease-in-out;
+}
+#topppaTemplateLibrary_toolbar-filter:hover .topppaTemplateLibrary_filter-tags.topppaTemplateLibrary_filter-show{
+  opacity: 1;
+  visibility: visible;
+}
+#topppaTemplateLibrary_filter-tags > li {
+  float: left;
+  padding: 10px;
+  width: calc(100% / 3);
+  text-align: left;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+#topppaTemplateLibrary_filter-tags > li:hover,
+#topppaTemplateLibrary_filter-tags > li.active {
+  color: #e8357c;
+}
+#topppaTemplateLibrary_filter-tags:before {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  /*border: solid transparent;
+  border-width: 0 10px 10px 0;*/
+  border-bottom-color: #fff;
+  content: " ";
+  pointer-events: none;
+}
+
+#topppa-TemplateLibrary_templates {
+  height: calc(100% + 30px);
+}
+
+.topppa-TemplateLibrary_templates-window {
+  position: relative; 
+  overflow-y: auto;
+  margin: 10px -15px 0;
+  height: calc(100% - 45px);
+}
+
+#topppa-TemplateLibrary_templates-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+          align-items: flex-start; 
+  -ms-flex-align: start;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.topppa-TemplateLibrary_template {
+  position: relative;
+  overflow: hidden;
+  margin: 15px;
+  border-radius: 2px; 
+  background-color: #fff;
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, .05);
+  padding: 5px;
+}
+.topppa-TemplateLibrary_templates--section .topppa-TemplateLibrary_template {
+  width: calc(33.333% - 30px);
+}
+.topppa-TemplateLibrary_templates--page .topppa-TemplateLibrary_template {
+  width: calc(33.333% - 30px);
+}
+.topppa-TemplateLibrary_templates--header .topppa-TemplateLibrary_template {
+  width: calc(33.333% - 30px);
+}
+.topppa-TemplateLibrary_templates--footer .topppa-TemplateLibrary_template {
+  width: calc(33.333% - 30px);
+}
+.topppa-TemplateLibrary_template-body {
+  position: relative;
+}
+.topppa-TemplateLibrary_template-preview {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  opacity: 0;
+  cursor: pointer; 
+  -webkit-transition: opacity .5s;
+          transition: opacity .5s;
+}
+.header-live-preview{
+    font-size: 11px;
+    padding: 10px;
+    color: #a4afb7;
+}
+
+.footer-live-preview{
+    color: #a4afb7;
+}
+
+.topppa-TemplateLibrary_template-preview i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #d5dadf;
+  font-size: 20px;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+.topppa-TemplateLibrary_template-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 2px; 
+  background-color: #460ec6;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  font-size: 10px;
+}
+.topppa-TemplateLibrary_template:hover .topppa-TemplateLibrary_template-preview {
+  opacity: 1;
+}
+.topppa-TemplateLibrary_template-thumbnail {
+  display: block;
+  width: 100%;
+}
+.topppa-TemplateLibrary_template-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+          align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  -webkit-justify-content: space-between;
+          justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  background-color: #fff;
+  font-size: 11px;
+  line-height: 1;
+  -webkit-transition: -webkit-transform .5s;
+          transition: -webkit-transform .5s;
+          transition:         transform .5s;
+          transition:         transform .5s, -webkit-transform .5s; 
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+}
+.topppa-TemplateLibrary_template-body .topppa-TemplateLibrary_template-name {
+    text-align: left;
+    color: #6d7882;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding: 10px 5px;
+}
+.topppa-TemplateLibrary_template:hover .topppa-TemplateLibrary_template-footer {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_pro-button {
+  color: #460ec6;
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_pro-button:hover,
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_pro-button:focus {
+  color: #ed639a;
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_insert-button {
+  color: #39b54a;
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_insert-button:hover,
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_insert-button:focus {
+  color: #39b54a;
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_preview-button {
+  color: #495157;
+}
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_preview-button:hover,
+.topppa-TemplateLibrary_template .topppaTemplateLibrary_preview-button:focus {
+  color: #606b73;
+}
+
+#elementor-template-library-header-preview .topppaTemplateLibrary_pro-button {
+  background-color: #e8357c;
+  color: #fff;
+}
+#elementor-template-library-header-preview .topppaTemplateLibrary_pro-button:hover,
+#elementor-template-library-header-preview .topppaTemplateLibrary_pro-button:focus {
+  background-color: #ed639a; 
+  color: #fff;
+}
+
+#elementor-template-library-header-preview .topppaTemplateLibrary_insert-button {
+  background-color: #562dd4;
+  color: #fff;
+}
+#elementor-template-library-header-preview .topppaTemplateLibrary_insert-button:hover,
+#elementor-template-library-header-preview .topppaTemplateLibrary_insert-button:focus {
+  background-color: #7857dd; 
+  color: #fff;
+}
+
+
+.elementor-add-new-section .topppa_templates_add_button img {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+/* Kit-specific styles */
+.topppa-kit-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    z-index: 10;
+}
+
+.topppa-kit-badge-free {
+    background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.topppa-kit-badge-pro {
+    background: linear-gradient(135deg, #ffc107, #fd7e14);
+}
+
+.topppa-kit-badge i {
+    font-size: 10px;
+}
+
+/* Pro overlay for locked templates */
+.topppa-pro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    border-radius: 4px;
+}
+
+.topppa-pro-lock {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.topppa-pro-lock i {
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Button styles */
+.topppa-kit-preview-button {
+    background-color: #6045bc !important;
+    border-color: #6045bc !important;
+}
+
+.topppa-kit-preview-button:hover {
+    background-color: #4f3a9f !important;
+    border-color: #4f3a9f !important;
+}
+
+.topppa-upgrade-button {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.topppa-upgrade-button:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+    color: #212529 !important;
+}
+
+/* Kit preview modal enhancements */
+.topppa-kit-preview-header {
+    padding: 20px;
+    border-bottom: 1px solid #e6e9ec;
+    text-align: center;
+}
+
+.topppa-kit-preview-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: #495157;
+}
+
+.topppa-kit-preview-header p {
+    margin: 0 0 15px 0;
+    color: #6e7d88;
+    font-size: 14px;
+}
+
+.topppa-kit-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.topppa-kit-pages-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #6045bc;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.topppa-kit-license {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.topppa-license-free {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.topppa-license-pro {
+    background: rgba(255, 193, 7, 0.1);
+    color: #ffc107;
+}
+
+.topppa-kit-features {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #f1f3f5;
+}
+
+.topppa-kit-features h5 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #495157;
+    font-weight: 600;
+}
+
+.topppa-kit-features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 5px;
+}
+
+.topppa-kit-features li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    color: #6e7d88;
+}
+
+.topppa-kit-features li i {
+    color: #28a745;
+    font-size: 10px;
+}
+
+.topppa-kit-pages-list {
+    padding: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.topppa-kit-pages-list h4 {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #495157;
+}
+
+.topppa-kit-page-item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.topppa-kit-page-item:last-child {
+    border-bottom: none;
+}
+
+.topppa-kit-page-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 100%;
+}
+
+.topppa-kit-page-item input[type="checkbox"] {
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.topppa-page-title {
+    font-weight: 500;
+    color: #495157;
+    flex-grow: 1;
+}
+
+.topppa-page-type {
+    color: #6e7d88;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.topppa-page-pro-badge {
+    color: #ffc107;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.topppa-kit-import-options {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e6e9ec;
+}
+
+.topppa-import-mode {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.topppa-import-mode label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #495157;
+}
+
+.topppa-import-mode input[type="radio"] {
+    margin: 0;
+}
+
+.topppa-kit-import-actions {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border-top: 1px solid #e6e9ec;
+}
+
+.topppa-import-kit-button {
+    background-color: #6045bc !important;
+    border-color: #6045bc !important;
+    padding: 12px 24px !important;
+    font-weight: 600 !important;
+}
+
+.topppa-import-kit-button:hover {
+    background-color: #4f3a9f !important;
+    border-color: #4f3a9f !important;
+}
+
+.topppa-kit-cancel-button {
+    background-color: #6e7d88 !important;
+    border-color: #6e7d88 !important;
+    color: white !important;
+    padding: 12px 24px !important;
+}
+
+.topppa-kit-cancel-button:hover {
+    background-color: #5a6c75 !important;
+    border-color: #5a6c75 !important;
+}
+
+/* Pro upgrade modal styles */
+.topppa-upgrade-modal-content {
+    text-align: center;
+    padding: 30px;
+}
+
+.topppa-upgrade-header {
+    margin-bottom: 30px;
+}
+
+.topppa-upgrade-header i {
+    font-size: 48px;
+    color: #ffc107;
+    margin-bottom: 15px;
+}
+
+.topppa-upgrade-header h3 {
+    margin: 0 0 10px 0;
+    font-size: 24px;
+    color: #495157;
+}
+
+.topppa-upgrade-header p {
+    margin: 0;
+    color: #6e7d88;
+    font-size: 16px;
+}
+
+.topppa-upgrade-features {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.topppa-upgrade-features h4 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: #495157;
+    text-align: center;
+}
+
+.topppa-upgrade-features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topppa-upgrade-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    font-size: 14px;
+    color: #495157;
+}
+
+.topppa-upgrade-features li i {
+    color: #28a745;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.topppa-upgrade-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.topppa-upgrade-now-button {
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
+    color: #212529 !important;
+    padding: 15px 30px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+.topppa-upgrade-now-button:hover {
+    background-color: #e0a800 !important;
+    border-color: #d39e00 !important;
+    color: #212529 !important;
+}
+
+.topppa-upgrade-cancel-button {
+    background-color: #6e7d88 !important;
+    border-color: #6e7d88 !important;
+    color: white !important;
+    padding: 15px 30px !important;
+}
+
+.topppa-upgrade-cancel-button:hover {
+    background-color: #5a6c75 !important;
+    border-color: #5a6c75 !important;
+}
+
+
+
+/* Import progress styles */
+.topppa-import-progress {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    z-index: 999999;
+    min-width: 400px;
+    text-align: center;
+}
+
+.topppa-import-progress h3 {
+    margin: 0 0 20px 0;
+    color: #495157;
+}
+
+.topppa-progress-bar {
+    width: 100%;
+    height: 8px;
+    background: #e6e9ec;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.topppa-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #6045bc, #8b5cf6);
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.topppa-import-status {
+    font-size: 14px;
+    color: #6e7d88;
+    margin-top: 10px;
+}
+
+/* PRO Template System Styles */
+.purchase-button {
+    background: linear-gradient(45deg, #667eea, #764ba2) !important;
+    border: none !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    padding: 12px 24px !important;
+    color: #ffffff !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 10 !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+    min-width: 180px !important;
+    text-align: center !important;
+    letter-spacing: 0.5px !important;
+}
+
+.purchase-button:hover {
+    background: linear-gradient(45deg, #5a6fd8, #6a4a9a) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6) !important;
+    transform: translate(-50%, -50%) scale(1.05) !important;
+}
+
+.pro-processed {
+    position: relative;
+}
+
+.pro-processed .topppaTemplateLibrary_insert-button,
+.pro-processed button:contains('Insert'),
+.pro-processed [class*='insert'] {
+    display: none !important;
+}
+
+.pro-processed .eicon-zoom-in-bold {
+    display: none !important;
+}
+
+/* Additional PRO Template System Styles */
+.pro-badge {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.pro-item {
+    position: relative;
+}
+
+.pro-item [class*="insert"],
+.pro-item button:contains("Insert"),
+.pro-item .elementor-template-library-template-insert,
+.pro-item .elementor-template-library-template-insert-button,
+.pro-item .elementor-template-library-template-footer {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.pro-item .topppa-TemplateLibrary_template-preview,
+.pro-item .eicon-zoom-in-bold {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 0 !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+}
+
+.pro-item .purchase-button {
+    display: block !important;
+    width: 100% !important;
+    background: linear-gradient(45deg, #667eea, #764ba2) !important;
+    color: white !important;
+    border: none !important;
+    padding: 12px 20px !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4) !important;
+    text-align: center !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.pro-item .purchase-button:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5) !important;
+}
+
+.pro-item .pro-message {
+    display: block !important;
+    text-align: center !important;
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53) !important;
+    color: white !important;
+    padding: 10px !important;
+    margin-top: 10px !important;
+    border-radius: 8px !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+    box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3) !important;
+    z-index: 9999 !important;
+    position: relative !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+/* PRO Access States */
+.pro-user-access {
+    /* User has PRO access - show normal template functionality */
+}
+
+.pro-user-access .topppaTemplateLibrary_insert-button,
+.pro-user-access button:contains('Insert'),
+.pro-user-access [class*='insert'] {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.pro-user-access .purchase-button {
+    display: none !important;
+}
+
+.pro-no-access {
+    /* User doesn't have PRO access - show purchase button */
+}
+
+.pro-no-access .topppaTemplateLibrary_insert-button,
+.pro-no-access button:contains('Insert'),
+.pro-no-access [class*='insert'] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
+
+.pro-no-access .purchase-button {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}

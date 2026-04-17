@@ -1,0 +1,1 @@
+.product-thumbnail-zoom img{transition:transform .3s ease;transform-origin:center center}.product-thumbnail-zoom:hover img{transform:scale(1.2)}.product-thumbnail-zoom{overflow:hidden}

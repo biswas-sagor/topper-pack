@@ -1,0 +1,19 @@
+.topppa-template-twentytwentyone .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator), .topppa-template-twentyfourteen .site-content .entry-header, .topppa-template-twentyfourteen .site-content .entry-content,.topppa-template-twentyfourteen .site-content .entry-summary,.topppa-template-twentyfourteen .site-content .entry-meta,.topppa-template-twentynineteen .page-content,.topppa-template-twentynineteen .entry .entry-content > *, .topppa-template-twentynineteen .entry .entry-summary > *, .topppa-template-twentynineteen .entry .entry-summary > .wp-block-group > .wp-block-group__inner-container > *, .topppa-template-twentynineteen .entry .entry-content > .wp-block-group > .wp-block-group__inner-container > *,.topppa-template-twentythirteen .entry-content,.topppa-template-twentytwenty .entry-content > *:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.is-style-wide), .page-template-template-home.topppa-template-kadence .site-container, .page-template-template-home.topppa-template-popularfx .entry-content {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.topppa-template-twentyeleven.page-template-template-home header.entry-header, .topppa-template-twentyfourteen.page-template-template-home header.entry-header,.topppa-template-twentynineteen.page-template-template-home header.entry-header,.topppa-template-twentyten.page-template-template-home .entry-title,.topppa-template-twentythirteen.page-template-template-home .entry-title,.topppa-template-twentytwelve.page-template-template-home header.entry-header,.topppa-template-twentytwenty.page-template-template-home header.entry-header,.page-template-template-home.topppa-template-kadence .entry-hero,.page-template-template-home.topppa-template-blocksy .hero-section,.page-template-template-home.topppa-template-generatepress .entry-header,.page-template-template-home.topppa-template-storefront .entry-header{
+   display: none;
+}
+.topppa-template-twentyfourteen .site-content, .topppa-template-twentyfourteen .site-main .widecolumn, .topppa-template-twentyfourteen .site-main .widecolumn .entry-content {
+    margin-left: auto;
+    margin-right: auto;
+}
+.page-template-template-home.topppa-template-blocksy [data-content=normal]>article{
+    --theme-block-wide-max-width:100%;
+    max-width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}

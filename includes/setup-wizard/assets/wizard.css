@@ -1,0 +1,904 @@
+/**
+ * Topper Pack Setup Wizard - Custom Design
+ */
+
+/* CSS Variables using plugin's color scheme */
+:root {
+    --topppa-text: #1C1C1C;
+    --topppa-body: #7B7E86;
+    --topppa-border: #F2F5F7;
+    --topppa-bg: #eaeaea;
+    --topppa-white: #ffffff;
+    --topppa-primary: #2D54A3;
+    --topppa-black: #052442;
+    --topppa-red: #DD200A;
+}
+
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+}
+
+.topppa-wizard {
+    background: var(--topppa-bg);
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+}
+
+.topppa-wizard-container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Progress Bar */
+.topppa-wizard-progress {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    background: var(--topppa-white);
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--topppa-border);
+}
+
+.topppa-progress-step {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.topppa-progress-step.completed {
+    color: var(--topppa-primary);
+}
+
+.topppa-progress-step.active {
+    color: var(--topppa-primary);
+    font-weight: 600;
+}
+
+.topppa-progress-step.pending {
+    color: var(--topppa-body);
+}
+
+.topppa-step-number {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.topppa-step-title {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.topppa-progress-step.completed .topppa-step-number {
+    background: var(--topppa-primary);
+    color: var(--topppa-white);
+}
+
+.topppa-progress-step.active .topppa-step-number {
+    background: var(--topppa-primary);
+    color: var(--topppa-white);
+}
+
+.topppa-progress-step.pending .topppa-step-number {
+    background: var(--topppa-border);
+    color: var(--topppa-body);
+}
+
+.topppa-progress-arrow {
+    color: var(--topppa-body);
+    font-weight: bold;
+    margin: 0 15px;
+    font-size: 12px;
+}
+
+/* Wizard Content */
+.topppa-wizard-content {
+    background: var(--topppa-white);
+    border-radius: 10px;
+    padding: 50px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--topppa-border);
+}
+.topppa-wizard-content .topppa-widget-title, .topppa-wizard-content .topppa-feature-title{
+text-align: left;
+}
+.topppa-wizard-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--topppa-primary);
+}
+
+.topppa-inner-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* Typography */
+.topppa-title-big {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--topppa-text);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.topppa-title-small {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--topppa-text);
+    margin-bottom: 0.5rem;
+}
+
+.topppa-description {
+    font-size: 1.1rem;
+    color: var(--topppa-primary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* Welcome Page */
+.topppa-welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.topppa-server-info {
+    background: var(--topppa-border);
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px 0;
+    text-align: left;
+    border: 1px solid var(--topppa-border);
+}
+
+.topppa-server-info h3 {
+    color: var(--topppa-text);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.topppa-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.topppa-info-item {
+    background: var(--topppa-white);
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--topppa-border);
+}
+
+.topppa-info-item .topppa-label {
+    font-weight: 600;
+    color: var(--topppa-text);
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+}
+
+.topppa-info-item .topppa-value {
+    color: var(--topppa-primary);
+    font-weight: 500;
+    font-size: 0.875rem;
+}
+
+.topppa-video-section {
+    margin: 30px 0;
+}
+
+.topppa-video-section h3 {
+    color: var(--topppa-text);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.topppa-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.topppa-video-container iframe {
+    width: 100%;
+    height: 340px;
+    border: none;
+}
+
+.topppa-video-description {
+    margin-top: 15px;
+    color: var(--topppa-body);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* Navigation */
+.topppa-wizard-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 20px;
+}
+
+.topppa-next-button {
+    background: var(--topppa-primary);
+    color: var(--topppa-white);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.topppa-next-button:hover {
+    background: var(--topppa-black);
+    color: var(--topppa-white);
+    transform: translateY(-1px);
+}
+
+.topppa-next-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.topppa-back-button {
+    background: var(--topppa-border);
+    color: var(--topppa-text);
+    border: 1px solid var(--topppa-border);
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.topppa-back-button:hover {
+    background: var(--topppa-bg);
+    transform: translateY(-1px);
+}
+
+.topppa-skip-setup {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.topppa-skip-link {
+    color: var(--topppa-body);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.3s ease;
+}
+
+.topppa-skip-link:hover {
+    color: var(--topppa-text);
+    text-decoration: underline;
+}
+
+/* Widgets and Features */
+.topppa-widget-container,
+.topppa-feature-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.topppa-widget-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.topppa-widget-actions span {
+    color: var(--topppa-primary);
+    cursor: pointer;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-size: 0.875rem;
+}
+
+.topppa-widget-actions span:hover {
+    background: var(--topppa-border);
+    color: var(--topppa-primary);
+}
+
+.topppa-item-widget,
+.topppa-item-feature {
+    background: var(--topppa-white);
+    border: 2px solid var(--topppa-border);
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.topppa-item-widget:hover,
+.topppa-item-feature:hover {
+    border-color: var(--topppa-primary);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(45, 84, 163, 0.15);
+}
+
+/* Remove the old hover selector since we now use .topppa-pro-item-link */
+
+.topppa-widget-inner,
+.topppa-feature-inner {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topppa-widget-title,
+.topppa-feature-title {
+    font-weight: 600;
+    color: var(--topppa-text);
+    font-size: 1rem;
+    margin: 0;
+    flex: 1;
+}
+
+/* Toggle Switch */
+.topppa-toggle {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.topppa-toggle__check {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.topppa-toggle__track {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--topppa-bg);
+    transition: 0.3s;
+    border-radius: 24px;
+}
+
+.topppa-toggle__track:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: var(--topppa-white);
+    transition: 0.3s;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.topppa-toggle__check:checked + .topppa-toggle__track {
+    background-color: var(--topppa-primary);
+}
+
+.topppa-toggle__check:checked + .topppa-toggle__track:before {
+    transform: translateX(26px);
+}
+
+/* Pro Badge */
+.topppa-pro-badge {
+    background: linear-gradient(135deg, var(--topppa-red) 0%, #ff4757 100%);
+    color: var(--topppa-white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(221, 32, 10, 0.3);
+    z-index: 2;
+}
+
+/* Pro Item Styling */
+.topppa-item-widget .topppa-pro-badge,
+.topppa-item-feature .topppa-pro-badge {
+    background: linear-gradient(135deg, var(--topppa-red) 0%, #ff4757 100%);
+    color: var(--topppa-white);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 12px;
+    border-radius: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(221, 32, 10, 0.3);
+    z-index: 2;
+}
+
+/* Pro Item Link */
+.topppa-pro-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.topppa-pro-item-link:hover {
+    text-decoration: none;
+    color: inherit;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(221, 32, 10, 0.2);
+}
+
+/* Pro Text */
+.topppa-pro-text {
+    color: var(--topppa-red);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 8px;
+}
+
+/* Pro Item Container */
+.topppa-pro-item-link {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
+    border: 2px solid var(--topppa-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.topppa-pro-item-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--topppa-red) 0%, #ff4757 100%);
+}
+
+.topppa-pro-item-link:hover {
+    border-color: var(--topppa-red);
+    background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+}
+
+/* Pro Purchase Section */
+.topppa-pro-purchase-section {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 1px solid var(--topppa-border);
+    position: relative;
+    overflow: hidden;
+}
+
+.topppa-pro-purchase-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--topppa-red) 0%, #ff4757 100%);
+}
+
+/* Enhanced Pro Purchase Link */
+.topppa-pro-purchase-link {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    background: linear-gradient(135deg, var(--topppa-red) 0%, #ff4757 100%) !important;
+    color: var(--topppa-white) !important;
+    padding: 15px 30px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    font-size: 1.1rem !important;
+    box-shadow: 0 4px 15px rgba(221, 32, 10, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.topppa-pro-purchase-link:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(221, 32, 10, 0.4) !important;
+    color: var(--topppa-white) !important;
+    text-decoration: none !important;
+}
+
+.topppa-pro-purchase-link:visited {
+    color: var(--topppa-white) !important;
+}
+
+.topppa-pro-purchase-link:active {
+    color: var(--topppa-white) !important;
+}
+
+.topppa-pro-purchase-link span {
+    color: var(--topppa-white) !important;
+}
+
+/* Feature Grid Styles */
+.topppa-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.topppa-feature-card {
+    background: var(--topppa-white);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--topppa-border);
+    transition: all 0.3s ease;
+}
+
+.topppa-feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.topppa-feature-card h4 {
+    color: var(--topppa-primary);
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.topppa-feature-card ul {
+    text-align: left;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.topppa-feature-card li {
+    margin-bottom: 8px;
+    color: var(--topppa-text);
+}
+
+/* Social Media Tags */
+.topppa-social-tags {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.topppa-social-tag {
+    background: var(--topppa-primary);
+    color: var(--topppa-white);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.topppa-social-tag.facebook { background: #1877f2; }
+.topppa-social-tag.twitter { background: #1da1f2; }
+.topppa-social-tag.instagram { background: #e4405f; }
+.topppa-social-tag.youtube { background: #ff0000; }
+
+/* API Integration Cards */
+.topppa-api-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 15px 0;
+}
+
+.topppa-api-card {
+    text-align: center;
+    padding: 15px;
+    background: var(--topppa-border);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.topppa-api-card:hover {
+    background: var(--topppa-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.topppa-api-card .title {
+    font-weight: 600;
+    color: var(--topppa-text);
+    margin-bottom: 5px;
+}
+
+.topppa-api-card .description {
+    font-size: 0.875rem;
+    color: var(--topppa-body);
+}
+
+/* Congrats Page */
+.topppa-congrats-info {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.topppa-quick-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.topppa-quick-links a {
+    background: var(--topppa-border);
+    color: var(--topppa-text);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.topppa-quick-links a:hover {
+    background: var(--topppa-bg);
+    transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .topppa-widget-container,
+    .topppa-feature-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .topppa-wizard-container {
+        padding: 20px 15px;
+    }
+    
+    .topppa-wizard-content {
+        padding: 30px 20px;
+    }
+    
+    .topppa-title-big {
+        font-size: 2rem;
+    }
+    
+    .topppa-title-small {
+        font-size: 1.25rem;
+    }
+    
+    .topppa-wizard-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .topppa-widget-container,
+    .topppa-feature-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .topppa-info-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .topppa-video-container iframe {
+        height: 250px;
+    }
+    
+    .topppa-wizard-progress {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+    
+    .topppa-progress-step {
+        margin: 5px;
+        font-size: 12px;
+    }
+    
+    .topppa-step-number {
+        width: 24px;
+        height: 24px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .topppa-wizard-content {
+        padding: 20px 15px;
+    }
+    
+    .topppa-title-big {
+        font-size: 1.75rem;
+    }
+    
+    .topppa-description {
+        font-size: 1rem;
+    }
+    
+    .topppa-server-info {
+        padding: 20px;
+    }
+    
+    .topppa-widget-container,
+    .topppa-feature-container {
+        gap: 15px;
+    }
+    
+    .topppa-item-widget,
+    .topppa-item-feature {
+        padding: 15px;
+    }
+}
+
+/* Animations */
+@keyframes topppa-fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.topppa-inner-content {
+    animation: topppa-fadeInUp 0.6s ease-out;
+}
+
+/* Loading State */
+.topppa-loading {
+    position: relative;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.topppa-loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid var(--topppa-border);
+    border-top: 2px solid var(--topppa-primary);
+    border-radius: 50%;
+    animation: topppa-spin 1s linear infinite;
+}
+
+@keyframes topppa-spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* PRO items with toggles (when pro plugin is installed) */
+.topppa-pro-item {
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border: 2px solid #dee2e6;
+    transition: all 0.3s ease;
+}
+
+.topppa-pro-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-color: var(--topppa-primary);
+}
+
+.topppa-pro-item .topppa-pro-badge {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: linear-gradient(135deg, var(--topppa-red) 0%, #c41e3a 100%);
+    color: var(--topppa-white);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 8px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(221, 32, 10, 0.3);
+    z-index: 2;
+}
+
+/* Hidden widgets */
+.topppa-hidden-widget {
+    display: none;
+}
+
+/* Read More Button */
+.topppa-read-more-container {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.topppa-read-more-btn {
+    background: var(--topppa-primary);
+    color: var(--topppa-white);
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(45, 84, 163, 0.2);
+}
+
+.topppa-read-more-btn:hover {
+    background: #1e3a8a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 84, 163, 0.3);
+}
+
+.topppa-read-more-btn[data-show="less"] {
+    background: var(--topppa-body);
+}
+
+.topppa-read-more-btn[data-show="less"]:hover {
+    background: #6b7280;
+}
+
+.topppa-read-more-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.topppa-read-more-btn:disabled:hover {
+    background: var(--topppa-primary);
+    transform: none;
+    box-shadow: 0 2px 8px rgba(45, 84, 163, 0.2);
+} 

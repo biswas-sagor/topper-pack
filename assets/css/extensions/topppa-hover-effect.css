@@ -1,0 +1,1 @@
+.topppa-hover-effect{position:relative}.topppa-hover-effect::before{height:100%;width:100%;position:absolute;content:"";opacity:0;left:0;top:0;transition:all .4s ease-in-out}.topppa-hover-effect:hover::before{opacity:1}.topppa-image-hover-pixel{position:absolute;display:none;background-color:#fff}

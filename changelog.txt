@@ -1,0 +1,154 @@
+== Changelog ==
+
+= 1.2.0 =
+* Added New Widgets 
+    * Trip Activities Accordion 
+    * Slider v3 widget 
+    * Hero Banner One 
+    * Vertical Marquee
+    * Project V3
+    * Testimonial Four
+    * Image Tab
+    * Accordion Service
+* Added New Extensions
+    * Dots Particle Animation 
+    * Hover Image Viewer
+* Modified Wodgets
+    * Blog
+    * Counter
+    * Header Info
+    * Icon Box
+    * Advanced Tab
+    * Image
+    * Marquee
+    * Service
+    * Team
+    * Hero slider
+    * Timeline
+    * Testimonial
+    * Trip Activities Accordion
+    * Trip Destination Tab
+    * Trip Destination Taxonomy
+
+= 1.1.0 =
+* placeholder image issue fixed
+* contact form issue fixed
+* shop widget updated
+* slider v2 max width control added
+* heading widget issue fixed
+* header info icon min width added
+* list item box hover control added
+* contact form title typo issue fixed
+* team widget hover blur added
+* pricing icon hover bg added
+* blog icon button bg control added
+* destination version fixed
+* trip destination widget added
+* slider animation duration fixed
+* mega menu content align control fixed
+* team box height width issue fixed
+* slider allowed html fixed
+* new control  breadcrumb added
+* slider max width control added
+
+= 1.0.9 =
+* Added New Addons 
+* Added woocommerce mini cart addons for Header
+* Added texonomy addons 
+* dot border control added for Swiper,
+* slide dot border scale control added
+* dot border animation added
+* Fix the Theme builder issue. 
+* Update Pot File 
+* Added New Timeline Design
+* Fixed the assets manager(only load active addons file when you enable assets manager)
+* improved site load speed
+* Improved shop addons
+
+= 1.0.8 =
+* Immediately Fix the PHP issue
+* Update topper-pack.php file
+
+= 1.0.7 =
+* Modified Cpt Builder Meta Widget control
+* Modified service V2 Widget control
+* Modified Slider Widget control
+* Modified Slider Css
+* Fixed PHP issue.
+* Update CSS File
+* Update POT file
+
+= 1.0.6 =
+* Fixed the Setup Wizard section
+* Optimized JS files
+* Optimized CSS files
+* Modified Video Button style control
+* Modified Slider Widget dot style
+* Added Trip Search Widget style control
+* Added Trip Activities Module Widget
+* Added Trip Activities Tab Widget
+* Added Trip Activities Taxonomy Widget
+* Added Trip Destination Module Widget
+* Added Trip Destination Tab Widget
+* Added Trip Destination Taxonomy Widget
+* Added Trip Types Module Widget
+* Added Trip Types Tab Widget
+* Added Trip Types Taxonomy Widget
+* Added Gallery Widget style control
+* Added Contact Form 7 Textarea Control
+* Fixed Item Box style issue
+* Fixed Icon Box style issue
+* Fixed Trade Icon Button responsive issue
+* Added Mega Menu Alignment Control
+* Fixed Ready template Import Issue. 
+* Fix the Page title Builder Issue 
+* Support Top Wordpress Theme like wordpress officeal theme
+* Fix the Smooth Scrolling issue. 
+* Added New Pro Extensions (Border Animation, Advance Hover Image animation and Pin section)
+* Update Pot File
+
+
+= 1.0.5 =
+* Fixed The Image issue on deshboard
+* Fixed the Swiper slide issue on Editor mode 
+* Fixed the PHP issue
+* Mega Menu: Sub Menu Positioning Issue Fixed
+* item box: Item box description Link color/hover fixed
+* contact form: Contact Form Button Responsive Positioning Fixed
+* social widget: Social Spacing Issue Fixed
+* Trip widget: New Feature Added
+* slider widget: Slider Video Button Position Issue Fixed
+* video button widget: Video Button Svg , Thumbnail Issue Fixed
+* Added Tread icon widgets
+* Added Trip Module v1 widget
+* Added Trip Module v2 widget
+* Added Trip search widget
+* Added Trip texonomy Module widget
+
+= 1.0.4 =
+* Fixed the setup wizard section
+* Optimize JS File 
+* Optimize the CSS file
+
+= 1.0.3 =
+* Added More Addons widget
+* Added 13+ Extensions
+* Added Setup Wizard for initial plugin configuration
+* Added WooCommerce widget dependency management
+* Added "Activate All" and "Deactivate All" functionality with smart filtering
+* Added WooCommerce widget visual indicators and styling
+* Added widget display limit with "Show More" functionality
+* Added smooth animations for widget reveal
+* Improved admin interface with modern design and better UX
+* Fixed JavaScript compatibility issues and jQuery conflicts
+* Enhanced security with proper nonce verification and output escaping
+* Optimized code structure and removed unnecessary dependencies
+* Added comprehensive error handling and debugging capabilities
+
+= 1.0.2 =
+* Initial release of Topper Pack with 100+ widgets, 20+ extensions, and premium features.
+
+== Upgrade Notice ==
+
+= 1.0.0 =
+First release of Topper Pack. No upgrades required at this time.
